@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Issue Tracker</title>
 
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Favicon -->
      <link rel="shortcut icon" href="./B13-A5-Github-Issue-Tracker/assets/github-logo.png" type="image/x-icon">
      
@@ -21,6 +24,54 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <h2>Hello World</h2>
+    <section class="navbar p-0">
+    <div class="navbar px-1 md:px-20 md:py-4 bg-base-100 shadow-sm">
+        <div class="md:flex-1">
+            <div class="flex gap-1 items-center">
+                <img class="w-9 h-9" src="./B13-A5-Github-Issue-Tracker/assets/github-logo.png" alt="">
+                <h2 class=" font-semibold text-2xl ">GitHub Issues Tracker</h2>
+            </div>
+        </div>
+        <div class="md:flex gap-2">
+            <input id="search-Input" type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+            <div class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Issue</div>
+        </div>
+    </div>
+    </section>
+
+    <section class="w-9/12 mx-auto pt-[60px] pb-4">
+        <div class="bg-white p-6 flex gap-2 rounded-lg">
+            <button class="btn w-[10%] btn-outline text-[#64748B] border-[#E4E4E7]">All</button> 
+            <button class="btn w-[10%] btn-outline text-[#64748B] border-[#E4E4E7]">Open</button> 
+            <button class="btn w-[10%] btn-outline text-[#64748B] border-[#E4E4E7]">Closed</button> 
+        </div>
+        
+    </section>
+
+    <section class="issue counting section w-9/12 mx-auto pb-4">
+        <div class="flex justify-between bg-white p-6 gap-2 rounded-lg">
+            <div class="flex items-center gap-2">
+                <div class="bg-[#ECE4FF] p-2.5 rounded-full">
+                    <img src="./B13-A5-Github-Issue-Tracker/assets/Aperture.png" alt=""> 
+                </div>
+                <div>
+                    <h2 class="font-semibold text-xl"><span id="count-issues">50</span> Issues</h2>   
+                    <p class="text-[#64748B]">Track and manage your project issues</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <span class=""><i class="fa-solid fa-circle fa-2xs" style="color: rgb(68, 180, 82);"></i>
+                Open
+                </span>
+                <span class=""><i class="fa-solid fa-circle fa-2xs" style="color: rgb(113, 72, 233);"></i> 
+                Closed
+                </span>
+            </div>
+        </div> 
+
+        
+        
+    </section>
 </body>
 </html>
