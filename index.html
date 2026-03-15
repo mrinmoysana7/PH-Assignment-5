@@ -4,8 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Issue Tracker</title>
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="./B13-A5-Github-Issue-Tracker/assets/github-logo.png" type="image/x-icon">
+     
+     <!-- Stylesheet -->
+     <link rel="stylesheet" href="./styles/style.css">
+     
+     <!-- Google Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+     <!-- DaisyUI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    
+    <!-- <section class="flex shadow-md w-6/12 mx-auto items-center border-1">
+        <div class="mx-auto space-y-6 ">
+          <div class="">
+            <img class="mx-auto" src="./B13-A5-Github-Issue-Tracker/assets/github-logo.png" alt="">
+          </div>
+          
+          <div class="text-center">
+            <h2 class="font-semibold text-2xl ">GitHub Issues Tracker</h2>
+            <p class="text-[#64748B]">Sign in to manage your issues</p>
+          </div>
+          
+        <div>  
+        <fieldset class="fieldset ">
+          <label class="label font-medium text-[16px] text-[#1F2937]">Username</label>
+          <input type="text" class="input min-w-full text-[#64748B]" placeholder="Enter Username" />
+          <p class="text-left text-[#4A00FF]">Default: admin</p>
+          <label class="label font-medium text-[16px] text-[#1F2937]">Password</label>
+          <input type="password" class="input text-[#64748B]" placeholder="Enter Password" />
+          <p class="text-left text-[#4A00FF]">Default: admin123</p>
+          
+          <button class="btn btn-primary mt-4 font-semibold text-[16px]">Sign In</button>
+        </fieldset>
+
+        </div>
+
+
+    </section> -->
+
+    <section class="flex justify-center  mx-auto px-7 py-[5%] lg:py-[5%]">
+      <fieldset class="fieldset bg-white border-none  shadow-md rounded-box  border px-3 py-8 md:px-8 lg:w-[520px] w-full">
+  <!-- <legend class="fieldset-legend">Login</legend> -->
+   <div class="">
+            <img class="mx-auto" src="./B13-A5-Github-Issue-Tracker/assets/github-logo.png" alt="">
+          </div>
+          
+          <div class="text-center">
+            <h2 class="font-semibold text-2xl ">GitHub Issues Tracker</h2>
+            <p class="text-[#64748B] text-[16px]">Sign in to manage your issues</p>
+          </div>
+
+  <label class="label font-medium text-[16px] text-[#1F2937]">Username</label>
+  <input id="input-username" type="email" class="input w-full text-[#64748B]" placeholder="Enter Username" />
+  <p class="text-left text-[#4A00FF]">Default: admin</p>
+
+  <label class="label font-medium text-[16px] text-[#1F2937]">Password</label>
+  <input id="input-password" type="password" class="input w-full text-[#64748B]" placeholder="Enter Password" />
+  <p class="text-left text-[#4A00FF]">Default: admin123</p>
+
+  <button id="sign-btn" class="btn btn-primary my-4">Sign In</button>
+
+  <div class="grid grid-cols-3 items-center mb-2">
+    <div class="border-t-1"></div>
+    <p class="text-center">OR</p>
+    <div class="border-t-1"></div>
+  </div> 
+
+  <p class="text-center text-[#64748B] mb-1">Demo Credentials:</p>
+
+  <div class=" bg-base-200 rounded-lg text-center py-6">
+    <h2 class="font-semibold">Username: <span class="font-light">admin</span></h2>            
+    <h2 class="font-semibold">Password: <span class="font-light">admin123</span></h2>    
+  </div>
+  
+</fieldset>
+
+    </section>
+
+    <script src="./script/login-page.js"></script>
 </body>
 </html>
