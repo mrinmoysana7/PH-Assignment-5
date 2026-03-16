@@ -23,7 +23,7 @@
      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="min-h-screen">
     <section class="navbar p-0">
     <div class="navbar px-1 md:px-20 md:py-4 bg-base-100 shadow-sm">
         <div class="md:flex-1">
@@ -39,7 +39,7 @@
     </div>
     </section>
 
-    <section class="all-tabs w-9/12 mx-auto mt-[60px] flex gap-2 rounded-lg mb-4 bg-white p-6">
+    <section class="all-tabs w-9/12 mx-auto mt-[60px] flex gap-2 rounded-lg mb-4 bg-white p-6 shadow-md">
         
             <button 
              id="tab-all" 
@@ -65,8 +65,8 @@
         
     </section>
 
-    <section class="issue counting section w-9/12 mx-auto pb-4">
-        <div class="flex justify-between bg-white p-6 gap-2 rounded-lg">
+    <section class="issue-counting-section w-9/12 mx-auto shadow-md">
+        <div class="flex justify-between bg-white p-6 gap-2 rounded-t-lg">
             <div class="flex items-center gap-2">
                 <div class="bg-[#ECE4FF] p-2.5 rounded-full">
                     <img src="./B13-A5-Github-Issue-Tracker/assets/Aperture.png" alt=""> 
@@ -91,8 +91,43 @@
         
     </section>
 
-    <section>
-
+    <section id="issue-container" class="w-9/12 mx-auto border-t-2 border-gray-300 bg-[#FBFBFB] grid grid-cols-4 gap-3 p-6 shadow-md rounded-b-lg mb-[60px]">
+        <div class="w-[256px] shadow-lg rounded-t-md border-t-2 border-[#00A96E] p-4 space-y-3">
+            <div class="flex items-center justify-between">
+            <div><img class="" src="./B13-A5-Github-Issue-Tracker/assets/Open-Status.png" alt="">
+            </div>
+            <div id="priority-box">
+                <p class="font-medium text-[12px] rounded-full w-[80px] py-1 px-6 bg-[#FEECEC]
+                ">HIGH</p>
+            </div>
+            </div>
+            <div>
+            <h2 class="text-[14px] font-semibold text-[#1F2937] mb-3">Fix navigation menu on mobile devices</h2>
+            <p class="text-[#64748B] text-[12px]">The navigation menu doesn't collapse properly on mobile devices...</p>
+            </div>           
+            <div class="flex gap-1">
+                <div class="">
+                    <div class="flex"><p class="border-2 text-[#EF4444] border-[#FECACA] font-medium text-[12px] rounded-full py-1 px-2 bg-[#FEECEC]
+                    "><i class="fa-solid fa-bug" style="color: #EF4444;"></i> Bug</p></div>
+                </div>
+                <div>
+                    <div class="flex"><p class="border-2 border-[#FDE68A] font-medium text-[12px] text-[#D97706] rounded-full py-1 px-2 bg-[#FFF8DB]
+                    "><i class="fa-regular fa-life-ring" style="color: #D97706;"></i> help wanted</p></div>
+                </div>
+                <div class="hidden">
+                    <div class="flex"><p class="border-2 font-medium text-[12px] rounded-full py-1 px-2 bg-[#FEECEC]
+                    "><i class="fa-duotone fa-solid fa-wand-magic-sparkles" style="--fa-primary-color: rgb(113, 72, 233); --fa-secondary-color: rgb(113, 72, 233);"></i> Enhancement</p></div>
+                </div>
+            </div> 
+            <div>
+                <div class="border-t-2 border-gray-300">
+                    <div class="px-4 pt-4">
+                    <p class="mb-2 text-[12px] text-[#64748B]">#1 by john_doe</p>
+                    <p class="text-[12px] text-[#64748B]">1/15/2024</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
     </section>
 
 
