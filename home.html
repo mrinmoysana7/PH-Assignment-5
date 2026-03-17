@@ -23,8 +23,8 @@
      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="min-h-screen">
-    <section class="navbar p-0  ">
+<body class="min-h-screen pb-[60px]">
+    <section class="navbar p-0">
             <div class="navbar grid grid-cols-1 md:grid-cols-2 px-10 py-3 space-y-3 md:px-20 md:py-4 bg-base-100 shadow-sm">
                 <div class="md:flex-1">
                     <div class="flex gap-1 items-center">
@@ -34,12 +34,12 @@
                 </div>
                 <div class="md:flex-1 text-center md:text-end">
                     <input id="search-Input" type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
-                    <div class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Issue</div>
+                    <button id="search-btn" class="btn btn-primary">Search</button>
                 </div>
             </div>
     </section>
 
-    <section class="all-tabs flex justify-center lg:justify-start w-9/12 mx-auto mt-[60px] rounded-lg mb-4 bg-white p-6 shadow-md">
+    <section class="all-tabs flex justify-center md:justify-start w-9/12 mx-auto mt-[60px] rounded-lg mb-4 bg-white p-6 shadow-md">
         
             <div class="flex gap-3 items-center justify-center">
                 <button 
@@ -93,40 +93,13 @@
         
     </section>
 
-    <section id="issue-container" class="w-9/12 mx-auto border-t-2 border-gray-300 bg-[#FBFBFB] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-6 shadow-md rounded-b-lg mb-[60px]">
-        
-         
-        <!-- <div class="grid grid-cols-2 gap-3 shadow-md p-4 border-t-gray-500 space-y-4">
-            <div class="text-start">
-                <p class="pb-2 text-gray-400 text-xs font-bold">performance_pete</p>
-                <p class="text-gray-400 text-xs font-bold">2024-01-24T13:15:00Z</p>
-            </div>
-            <div class="text-end">
-                <p class="pb-2 text-gray-400 text-xs font-bold">2024-01-24T13:15:00Z</p>
-                <p class="text-gray-400 text-xs font-bold">john_doe</p>
-            </div>
-        </div> -->
-
+    <section id="issue-container" class="w-9/12 mx-auto border-t-2 border-gray-300 bg-[#FBFBFB] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 p-6 shadow-md rounded-b-lg ">
 
     </section>
 
     <!-- Open the modal using ID.showModal() method -->
     <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
-    <!-- <dialog id="issue_modal" class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box">
     
-    <div id="display_modal" class="space-y-8">
-    <div>
-       
-    <div class="modal-action">
-      <form method="dialog"> -->
-        <!-- if there is a button in form, it will close the modal -->
-        <!-- <button class="btn">Close</button>
-      </form>
-    </div>
-  </div>
-    </dialog> -->
-
     <dialog id="issue_modal" class="modal">
   <div class="modal-box">
 
@@ -142,11 +115,6 @@
 
   </div>
 </dialog>
-
-
-
-    
-
 
     <script src="./script/home.js"></script>
 </body>

@@ -31,10 +31,11 @@ const loadIssue = () => {
 
 const displayIssues = (issues) => {
     const issueContainer = document.getElementById("issue-container");
-    // issueContainer.innerHTML = "";
+    issueContainer.innerHTML = "";
     
     issues.forEach((issu) => {
         // console.log(issu);
+        
         const createDiv = document.createElement("div");
         createDiv.setAttribute("onclick", `loadModal(${issu.id})`);
         createDiv.classList.add("cursor-pointer");
@@ -156,6 +157,31 @@ const displayModalIssue = (modal) => {
 };
 
 loadIssue();
+
+document.getElementById("search-btn").addEventListener("click", () => {
+    const getInput = document.getElementById("search-Input");
+    const inputValue = getInput.value.trim().toLowerCase();
+    
+    const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${inputValue}`;
+    console.log(url);
+    fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+        const allIssue = data.data || [];
+
+            // ✅ Only matching items রাখবে
+            const filteredIssues = allIssue.filter(issue =>
+                issue.title.toLowerCase().includes(inputValue)
+            );
+
+            // ✅ শুধু filtered data show হবে
+            displayIssues(filteredIssues);
+        
+        });
+     
+
+    });
+
 
 // https://phi-lab-server.vercel.app/api/v1/lab/issues
 
